@@ -667,7 +667,10 @@ header {
     z-index: 11;
 }
 
-header ~ .main-page,
+header ~ .main-page {
+    padding-top: 130rem;
+}
+
 header ~ .inner-page {
 	padding-top: 160rem;
 }
@@ -2048,26 +2051,43 @@ table td:nth-child(3) {
 }
 
 .main-block {
-    position: relative;
     display: flex;
-    -ms-align-items: center;
-    align-items: center;
+    /*-ms-align-items: center;
+    align-items: center;*/
     justify-content: space-between;
-    max-width: 1830rem;
+    max-width: 1800rem;
     width: 100%;
-    margin: 0 auto 150rem;
-    padding: 606rem 15rem 0;
+    margin: 0 0 50rem;
+    padding: 0 15rem;
+}
+
+.main-jack {
+    position: relative;
+    max-width: 1041rem;
+    width: 100%;
+    height: 843rem;
+}
+
+.main-jack img {
+    position: absolute;
+    top: -150rem;
+    left: 50rem;
+    max-width: 1041rem;
+}
+
+.main-info {
+    display: flex;
+    flex-direction: column;
+    -ms-align-items: flex-end;
+    align-items: flex-end;
+    max-width: 885rem;
+    width: 100%;
 }
 
 .kv {
-    position: absolute;
-    top: -125rem;
-    left: -58rem;
-    right: 0;
-    margin: auto;
-    max-width: 1802rem;
+    max-width: 956rem;
     width: 100%;
-    height: 953rem;
+    height: 411rem;
     background: url(../img/kv.png) center no-repeat;
     background-size: contain;
 }
@@ -2075,10 +2095,10 @@ table td:nth-child(3) {
 .steps {
     display: flex;
     justify-content: space-between;
-    max-width: 1028rem;
+    max-width: 845rem;
     width: 100%;
-    margin: auto;
-    transform: rotate(-7deg) skewX(-10deg);
+    margin-top: 50rem;
+    transform: skewX(-10deg);
 }
 
 .step {
@@ -2086,18 +2106,27 @@ table td:nth-child(3) {
     width: 100%;
 }
 
+.step:nth-child(1) {
+    margin-top: 120rem;
+}
+
+.step:nth-child(2) {
+    margin-top: 60rem;
+}
+
 .step-title {
     display: flex;
     -ms-align-items: center;
     align-items: center;
     justify-content: center;
-    max-width: 300rem;
-    width: 100%;
-    height: 60rem;
-    margin-bottom: 10rem;
+    max-width: 290rem;
+    width: max-content;
+    min-height: 58rem;
+    margin: 0 auto 5rem;
+    padding: 12rem 20rem 10rem;
     background: #FFE500;
     font-style: italic;
-    font-size: 30rem;
+    font-size: 28rem;
     line-height: 1;
     text-transform: uppercase;
     color: #009640;
@@ -2110,16 +2139,13 @@ table td:nth-child(3) {
     text-align: center;
 }
 
-.step-text a {
+.step-text a,
+.step-text span {
     color: #FFE500;
 }
 
-.step .btn-wrapper {
-    margin-top: 20rem;
-}
-
-.step .btn {
-    transform: rotate(0) skewX(0);
+.steps + .btn-wrapper {
+    margin: 0 auto;
 }
 
 .prizes {
@@ -2162,15 +2188,15 @@ table td:nth-child(3) {
 }
 
 .prize2 .prize-img {
-    max-width: 340rem;
+    max-width: 339rem;
 }
 
 .prize3 .prize-img {
-    max-width: 400rem;
+    max-width: 287rem;
 }
 
 .prize4 .prize-img {
-    max-width: 285rem;
+    max-width: 199rem;
 }
 
 .prize-name {
@@ -2192,12 +2218,11 @@ table td:nth-child(3) {
 }
 
 .prize4 .prize-name {
-    color: #fff;
-    background: #EB2316;
+    height: 96rem;
 }
 
 .prize-text {
-    max-width: 300rem;
+    max-width: 320rem;
     width: 100%;
     margin: auto;
     font-style: italic;
@@ -2208,21 +2233,29 @@ table td:nth-child(3) {
 }
 
 .superprize-block {
-    margin-bottom: 100rem;
+    margin-top: 100rem;
 }
 
 .jack-superprize {
     position: relative;
-    max-width: 744rem;
+    max-width: 974rem;
     width: 100%;
-    height: 640rem;
+    height: 610rem;
     margin: auto;
 }
 
-.jack-superprize img {
+.jack-superprize-img {
     position: absolute;
-    max-width: 744rem;
+    max-width: 645rem;
     bottom: 0;
+    right: 0;
+}
+
+.babich {
+    position: absolute;
+    max-width: 754rem;
+    bottom: 0;
+    left: 0;
 }
 
 /* Safari and Chrome */
@@ -2261,7 +2294,7 @@ table td:nth-child(3) {
 .lightrays {
     position: absolute;
     top: -220rem;
-    left: -480rem;
+    left: -280rem;
     width: 1200rem;
     height: 1200rem;
     background: url(../img/lightrays.jpg) center no-repeat;
@@ -2278,6 +2311,7 @@ table td:nth-child(3) {
 
 .superprize-text {
     display: flex;
+    flex-direction: column;
     -ms-align-items: center;
     align-items: center;
     justify-content: center;
@@ -2285,14 +2319,27 @@ table td:nth-child(3) {
     width: 100%;
     min-height: 94rem;
     margin: auto;
-    padding: 10rem;
-    background: #FFE500;
     font-style: italic;
-    font-size: 31rem;
-    line-height: 37rem;
+    font-size: 40rem;
+    line-height: 1;
     text-transform: uppercase;
     color: #009640;
     transform: skewX(-10deg);
+}
+
+.superprize-text span {
+    display: inline-flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+    min-height: 47rem;
+    margin: auto;
+    padding: 20rem 30rem;
+    background: #FFE500;
+}
+
+.superprize-text span:last-child {
+    margin: -20rem auto 0;
 }
 
 .error-title {
@@ -2387,6 +2434,7 @@ table td:nth-child(3) {
 
     header ~ .main-page {
         padding-top: 100px;
+        padding-bottom: 0;
     }
  
     header ~ .inner-page {
@@ -2567,6 +2615,11 @@ table td:nth-child(3) {
     .main-page, 
     .inner-page {
         padding-bottom: 60px;
+    }
+
+    .inner-page {
+        background: #62BB46 url(../img/bg.png) center 0 no-repeat;
+        background-size: cover;
     }
 
     .title,
@@ -3314,50 +3367,78 @@ table td:nth-child(3) {
     .main-block {
         position: relative;
         flex-direction: column;
+        -ms-align-items: center;
+        align-items: center;
         max-width: 375px;
-        margin-bottom: 50px;
-        padding: 400px 15px 0;
+        margin: 0 auto 50px;
+        padding: 0 15px;
+    }
+
+    .main-jack {
+        position: absolute;
+        top: 45px;
+        max-width: 315px;
+        height: 299px;
+    }
+
+    .main-jack img {
+        position: static;
+        top: auto;
+        left: auto;
+        max-width: 100%;
+    }
+
+    .main-info {
+        -ms-align-items: center;
+        align-items: center;
+        max-width: 300px;
     }
 
     .kv {
-        top: -35px;
-        left: 0;
-        max-width: 300px;
-        height: 420px;
+        position: relative;
+        max-width: 296px;
+        height: 81px;
+        margin-bottom: 280px;
         background: url(../img/kv-mob.png) center no-repeat;
         background-size: contain;
+        order: -1;
+        z-index: 1;
     }
 
     .steps {
         flex-direction: column;
         -ms-align-items: center;
         align-items: center;
-        max-width: 300px;
+        transform: none;
+        max-width: 100%;
+        margin-top: 20px;
     }
 
     .step {
         max-width: 230px;
         margin: 0 auto 20px;
         margin-bottom: 20px;
+        transform: skewX(-10deg);
+    }
+
+    .step:nth-child(1),
+    .step:nth-child(2) {
+        margin-top: 0;
     }
 
     .step-title {
-        max-width: 196px;
-        height: 40px;
+        max-width: 230px;
+        width: 100%;
+        height: 50px;
         margin: auto;
-        font-size: 18px;
+        padding: 0;
+        font-size: 24px;
+        text-align: center;
     }
 
     .step-text {
         font-size: 16px;
         line-height: 19px;
-    }
-
-    .step .btn {
-        position: absolute;
-        top: -90px;
-        left: 0;
-        right: 0;
     }
 
     .main-info .code-form {
@@ -3382,15 +3463,15 @@ table td:nth-child(3) {
     }
 
     .prize2 .prize-img {
-        max-width: 250px;
+        max-width: 206px;
     }
 
     .prize3 .prize-img {
-        max-width: 280px;
+        max-width: 169px;
     }
 
     .prize4 .prize-img {
-        max-width: 190px;
+        max-width: 142px;
     }
 
     .prize-name {
@@ -3398,6 +3479,10 @@ table td:nth-child(3) {
         height: 46px;
         font-size: 24px;
         transform: skewX(-10deg);
+    }
+
+    .prize4 .prize-name {
+        height: 78px;
     }
 
     .prize-text {
@@ -3426,21 +3511,31 @@ table td:nth-child(3) {
     }
 
     .superprize-block {
-        margin-bottom: 50px;
+        margin-top: 50px;
     }
 
     .jack-superprize {
-        max-width: 332px;
-        height: 320px;
+        max-width: 402px;
+        height: 270px;
     }
 
-    .jack-superprize img {
-        max-width: 332px;
+    .babich {
+        max-width: 311px;
+        left: -130px;
+        right: 0;
+        margin: auto;
+    }
+
+    .jack-superprize-img {
+        max-width: 266px;
+        left: 0;
+        right: -100px;
+        margin: auto;
     }
 
     .lightrays {
         top: -95px;
-        left: -250px;
+        left: -220px;
         width: 600px;
         height: 600px;
     }
@@ -3450,8 +3545,8 @@ table td:nth-child(3) {
         max-width: 510px;
         min-height: 84px;
         padding: 10px;
-        font-size: 14px;
-        line-height: 17px;
+        font-size: 18px;
+        line-height: 22px;
         text-align: center;
     }
 
@@ -3467,6 +3562,18 @@ table td:nth-child(3) {
         height: 100%;
         background: #FFE500;
         z-index: -1;
+    }
+
+    .superprize-text span {
+        display: inline-block;
+        min-height: auto;
+        margin: 0;
+        padding: 0;
+        background: none;
+    }
+
+    .superprize-text span:last-child {
+        margin: 0;
     }
 
     .fresh-block .title {
