@@ -86,7 +86,6 @@ body {
     border: 2px dashed #fff;
     text-align: center;
     border-radius: 0;
-    transform: rotate(-5deg) skewX(-10deg);
 }
 
 .dropzone.dropzone--custom.dz-clickable.dz-started {
@@ -173,7 +172,7 @@ body {
     outline: none;
     border: 0;
     border-radius: 0;
-    transform: rotate(-5deg) skewX(-10deg);
+    transform: skewX(-10deg);
 }
 
 .uf-button-submit.button-submit--custom:hover,
@@ -192,7 +191,7 @@ body {
     line-height: 1.2;
     text-align: center;
     color: #FFE500;
-    transform: rotate(-5deg) skewX(-10deg);
+    transform: skewX(-10deg);
 }
 
 .uf-switchToManuallyButton-wrapper.switchToManuallyButton-wrapper--custom button {
@@ -215,7 +214,7 @@ body {
     outline: none;
     border: none;
     text-decoration: underline;
-    transform: rotate(-5deg) skewX(-10deg);
+    transform: skewX(-10deg);
 }
 
 .dropzone.dz-started .dz-message span:hover {
@@ -229,7 +228,7 @@ body {
 .uf-controls-wrapper {
     position: relative;
     margin-top: 20px;
-    transform: rotate(-5deg) skewX(-10deg);
+    transform: skewX(-10deg);
     z-index: 1;
 }
 
@@ -311,7 +310,7 @@ body {
     line-height: 22px;
     text-align: center;
     margin-bottom: 25px;
-    transform: rotate(-5deg) skewX(-10deg);
+    transform: skewX(-10deg);
 }
 
 zxing-scanner {
@@ -344,7 +343,7 @@ app-root button {
     outline: none;
     border: 0;
     border-radius: 0;
-    transform: rotate(-5deg) skewX(-10deg);
+    transform: skewX(-10deg);
 }
 
 app-root button:hover {
@@ -390,5 +389,21 @@ app-root select {
     padding: 0 30px;
     border: 1px solid transparent;
     border-radius: 0;
-    transform: rotate(-5deg) skewX(-10deg);
+    transform: skewX(-10deg);
+}
+
+app-root .dropzone .dz-preview.dz-image-preview {
+    width: 200px;
+    height: 200px;
+}
+
+app-root .dropzone .dz-preview .dz-image {
+    width: 200px;
+    height: 200px;
+}
+
+.angular-uf-no-device-message,
+.angular-uf-device-check-err-message,
+.angular-uf-restrict-message {
+    text-align: center;
 }
