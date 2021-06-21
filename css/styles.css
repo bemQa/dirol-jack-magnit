@@ -668,7 +668,7 @@ header {
 }
 
 header ~ .main-page {
-    padding-top: 130rem;
+    padding-top: 150rem;
 }
 
 header ~ .inner-page {
@@ -2063,16 +2063,16 @@ table td:nth-child(3) {
 
 .main-jack {
     position: relative;
-    max-width: 1041rem;
+    max-width: 700rem;
     width: 100%;
     height: 843rem;
 }
 
 .main-jack img {
     position: absolute;
-    top: -150rem;
+    top: -120rem;
     left: 50rem;
-    max-width: 1041rem;
+    max-width: 835rem;
 }
 
 .main-info {
@@ -2080,14 +2080,14 @@ table td:nth-child(3) {
     flex-direction: column;
     -ms-align-items: flex-end;
     align-items: flex-end;
-    max-width: 885rem;
+    max-width: 1050rem;
     width: 100%;
 }
 
 .kv {
-    max-width: 956rem;
+    max-width: 1011rem;
     width: 100%;
-    height: 411rem;
+    height: 231rem;
     background: url(../img/kv.png) center no-repeat;
     background-size: contain;
 }
@@ -2095,23 +2095,42 @@ table td:nth-child(3) {
 .steps {
     display: flex;
     justify-content: space-between;
-    max-width: 845rem;
+    max-width: 1050rem;
     width: 100%;
-    margin-top: 50rem;
-    transform: skewX(-10deg);
+    margin-top: 40rem;
 }
 
 .step {
-    max-width: 300rem;
+    position: relative;
+    max-width: 340rem;
     width: 100%;
+    padding-top: 300rem;
 }
 
 .step:nth-child(1) {
-    margin-top: 120rem;
+    max-width: 300rem;
 }
 
-.step:nth-child(2) {
-    margin-top: 60rem;
+.step-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 300rem;
+    margin: auto;
+}
+
+.step:nth-child(2) .step-img {
+    top: -110rem;
+    left: -150rem;
+    right: -150rem;
+    width: 499rem;
+}
+
+.step:nth-child(3) .step-img {
+    left: -150rem;
+    right: -190rem;
+    width: 305rem;
 }
 
 .step-title {
@@ -2130,6 +2149,7 @@ table td:nth-child(3) {
     line-height: 1;
     text-transform: uppercase;
     color: #009640;
+    transform: skewX(-10deg);
 }
 
 .step-text {
@@ -2139,9 +2159,32 @@ table td:nth-child(3) {
     text-align: center;
 }
 
+.step-text2 {
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+    max-width: 340rem;
+    width: max-content;
+    min-height: 72rem;
+    margin: 10rem auto 5rem;
+    padding: 9rem 20rem 10rem;
+    background: #fff;
+    font-style: italic;
+    text-align: center;
+    font-size: 22rem;
+    line-height: 1;
+    color: #009640;
+    transform: skewX(-10deg);
+}
+
 .step-text a,
 .step-text span {
     color: #FFE500;
+}
+
+.step-text2 + .btn-wrapper {
+    margin-top: 30rem;
 }
 
 .steps + .btn-wrapper {
@@ -3396,9 +3439,8 @@ table td:nth-child(3) {
 
     .kv {
         position: relative;
-        max-width: 296px;
+        max-width: 294px;
         height: 81px;
-        margin-bottom: 280px;
         background: url(../img/kv-mob.png) center no-repeat;
         background-size: contain;
         order: -1;
@@ -3411,19 +3453,30 @@ table td:nth-child(3) {
         align-items: center;
         transform: none;
         max-width: 100%;
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     .step {
-        max-width: 230px;
+        max-width: 300px !important;
         margin: 0 auto 20px;
-        margin-bottom: 20px;
-        transform: skewX(-10deg);
+        padding-top: 230px;
     }
 
-    .step:nth-child(1),
-    .step:nth-child(2) {
-        margin-top: 0;
+    .step:nth-child(1) {
+        padding-top: 0
+    }
+
+    .step:nth-child(2) .step-img {
+        top: -50px;
+        left: -100px;
+        right: -100px;
+        width: 321px;
+    }
+
+    .step:nth-child(3) .step-img {
+        left: -100px;
+        right: -130px;
+        width: 212px;
     }
 
     .step-title {
@@ -3439,6 +3492,15 @@ table td:nth-child(3) {
     .step-text {
         font-size: 16px;
         line-height: 19px;
+    }
+
+    .step-text2 {
+        max-width: 300px;
+        min-height: 58px;
+        margin: 10px auto 5px;
+        padding: 9px 20px 10px;
+        font-size: 18px;
+        line-height: 20px;
     }
 
     .main-info .code-form {
